@@ -1,0 +1,69 @@
+(A)
+
+fetch("https://restcountries.com/v3.1/all")
+  .then(response => response.json())
+  .then(data => {
+    const asiaCountries = data.filter(country => country.region === "Asia");
+    console.log(asiaCountries);
+  })
+  .catch(error => console.log(error));
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+(B)
+
+
+fetch("https://restcountries.com/v3.1/all")
+  .then(response => response.json())
+  .then(data => {
+    const lessThan2LakhPopulation = data.filter(country => country.population < 200000);
+    console.log(lessThan2LakhPopulation);
+  })
+  .catch(error => console.log(error));
+
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+(C)
+
+
+fetch("https://restcountries.com/v3.1/all")
+  .then(response => response.json())
+  .then(data => {
+    data.forEach(country => {
+      console.log(`Name: ${country.name.common}, Capital: ${country.capital[0]}, Flag: ${country.flags.png}`);
+    });
+  })
+  .catch(error => console.log(error));
+
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+(D)
+
+
+fetch("https://restcountries.com/v3.1/all")
+  .then(response => response.json())
+  .then(data => {
+    const totalPopulation = data.reduce((acc, country) => acc + country.population, 0);
+    console.log(`Total population: ${totalPopulation}`);
+  })
+  .catch(error => console.log(error));
+
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+(E)
+
+
+
+fetch("https://restcountries.com/v3.1/all")
+  .then(response => response.json())
+  .then(data => {
+    const usDollarCountries = data.filter(country => country.currencies.USD);
+    console.log(usDollarCountries);
+  })
+  .catch(error => console.log(error));
