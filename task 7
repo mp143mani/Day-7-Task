@@ -8,6 +8,7 @@ fetch("https://restcountries.com/v3.1/all")
   })
   .catch(error => console.log(error));
 
+
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -26,7 +27,6 @@ fetch("https://restcountries.com/v3.1/all")
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 (C)
-
 
 fetch("https://restcountries.com/v3.1/all")
   .then(response => response.json())
@@ -53,17 +53,17 @@ fetch("https://restcountries.com/v3.1/all")
   .catch(error => console.log(error));
 
 
+
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 (E)
 
 
-
 fetch("https://restcountries.com/v3.1/all")
   .then(response => response.json())
   .then(data => {
-    const usDollarCountries = data.filter(country => country.currencies.USD);
+    const usDollarCountries = data.filter(country => country.currencies && country.currencies.USD);
     console.log(usDollarCountries);
   })
   .catch(error => console.log(error));
