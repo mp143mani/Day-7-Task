@@ -8,6 +8,13 @@ fetch("https://restcountries.com/v3.1/all")
   })
   .catch(error => console.log(error));
 
+output
+[
+  { /* Asia Country 1 data */ },
+  { /* Asia Country 2 data */ },
+  // ...
+]
+
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -23,6 +30,13 @@ fetch("https://restcountries.com/v3.1/all")
   })
   .catch(error => console.log(error));
 
+output
+[
+  { /* Country with population less than 200000 data */ },
+  { /* Another country with population less than 200000 data */ },
+  // ...
+]
+
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -36,6 +50,11 @@ fetch("https://restcountries.com/v3.1/all")
     });
   })
   .catch(error => console.log(error));
+
+output
+Name: Country Name 1, Capital: Capital 1, Flag: Flag URL 1
+Name: Country Name 2, Capital: Capital 2, Flag: Flag URL 2
+// ...
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -52,6 +71,8 @@ fetch("https://restcountries.com/v3.1/all")
   })
   .catch(error => console.log(error));
 
+output
+Total population: Calculated Total Population
 
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -67,3 +88,12 @@ fetch("https://restcountries.com/v3.1/all")
     console.log(usDollarCountries);
   })
   .catch(error => console.log(error));
+
+
+output
+[
+  { /* Country with USD currency data */ },
+  { /* Another country with USD currency data */ },
+  // ...
+]
+
